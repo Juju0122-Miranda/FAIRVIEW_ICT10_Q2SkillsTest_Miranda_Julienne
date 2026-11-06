@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Periodic Table of Elements</title>
+
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/736x/ee/da/11/eeda119d767ca3d2d818697fe28b2062.jpg");
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            min-height: 100vh;
+            padding: 14px 20px 40px;
+            box-sizing: border-box;
+        }
+
+        #top {
+            font-weight: bolder;
+            font-size: 20px;
+            color: #16094b;
+            text-align: center;
+        }
+
+        h2 {
+            background-color: rgba(240, 239, 239, 0.9);
+            color: #16094b;
+            border-radius: 10px;
+            margin: 2px;
+            width: auto;
+            font-weight: bold;
+            text-align: center;
+        }
+
+        #main {
+            background-color: rgba(240, 239, 239, 0.8);
+            width: 400px;
+            min-height: 328px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            padding: 18px;
+            border-radius: 30px;
+            box-sizing: border-box;
+        }
+
+        h4 {
+            font-weight: bolder;
+            font-size: 25px;
+            color: #16094b;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #16094b;
+        }
+
+        .input-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .input-container label {
+            color: #16094b;
+            white-space: nowrap;
+        }
+
+        .input-container input {
+            width: 55%;
+        }
+
+        input[type="button"] {
+            background-color: white;
+            color: #16094b;
+            border: 2px solid #16094b;
+            border-radius: 10px;
+            padding: 8px 20px;
+            margin: 8px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        input[type="text"] {
+            background-color: white;
+            color: #16094b;
+            border: 2px solid #16094b;
+            border-radius: 10px;
+            padding: 10px;
+            margin: 5px;
+            width: 80%;
+            font-weight: bold;
+            box-sizing: border-box;
+        }
+
+        #result {
+            background-color: rgba(240, 239, 239, 0.9);
+            color: #16094b;
+            font-size: 17px;
+            font-weight: bold;
+            text-align: center;
+            width: 380px;
+            max-width: 90%;
+            padding: 10px 20px;
+            border-radius: 20px;
+            box-sizing: border-box;
+        }
+
+        footer {
+            background-color: rgba(22, 9, 75, 0.9);
+            color: white;
+            text-align: center;
+            padding: 10px;
+            font-size: 14px;
+            font-weight: bold;
+            width: 100%;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header">
+
+        <div id="top">
+            <h2>PERIODIC TABLE OF ELEMENTS</h2>
+        </div>
+
+        <div id="main">
+            <h4>Non-Metal Finders</h4>
+
+            <p>
+                <b>Instructions:</b> Enter the element
+                <b>symbol</b> of any non-metal element from
+                the periodic table of elements.
+            </p>
+
+            <div class="input-container">
+                <label for="Element">Element Symbol:</label>
+                <input type="text" id="Element" placeholder="Ex: H, Br, S, F">
+            </div>
+
+            <br>
+            <input type="button" py-click="search_element" value="Check Details">
+            <input type="button" py-click="clear" value="Clear">
+        </div>
+
+        <div id="result">
+            <p id="message"></p>
+        </div>
+
+    </div>
+
+    <script type="py" src="main.py"></script>
+
+</body>
+</html>
